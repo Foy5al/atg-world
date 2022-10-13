@@ -5,7 +5,7 @@ import "./TopBar.css";
 
 const TopBar = () => {
   return (
-    <Navbar>
+    <Navbar className="d-none d-lg-flex">
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} alt="logo" />

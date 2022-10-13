@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Tab, Tabs } from "react-bootstrap";
+import { Button, Col, Container, Row, Tab, Tabs } from "react-bootstrap";
+import { CaretDownFill, GeoAlt, PeopleFill } from "react-bootstrap-icons";
+import JobCard from "../JobCard/JobCard";
 import PostCardContainer from "../PostCardContainer/PostCardContainer";
 import "./PostCategory.css";
 
@@ -33,8 +35,27 @@ const PostCategory = () => {
         <Tab eventKey="education" title="Education">
           <div>Lorem</div>
         </Tab>
+
         <Tab eventKey="job" title="Job">
-          <div>Lorem</div>
+          <Row className="mx-auto">
+        <Col sm={7}>
+        <JobCard />
+        </Col>
+        <Col sm={4} className="text-end">
+          <div style={{ marginTop: -60, marginBottom: 50, marginLeft: "auto" }}>
+            <Button variant="light">
+              Write a Post <CaretDownFill/>
+            </Button>
+            <Button variant="primary">
+              +<PeopleFill /> Join Group
+            </Button>
+          </div>
+          <div>
+            <GeoAlt />
+            <input type="text" defaultValue={"Noida, India"} />
+          </div>
+        </Col>
+      </Row>
         </Tab>
       </Tabs>
     </Container>
